@@ -28,10 +28,10 @@
 #define MAX_RPM 300 // motor  maximum RPM at output shaft
 #define MAX_ACC 20000 // motor Acceleration at base motor          
 #define COUNTS_PER_REV_1 2709.2 // wheel encoder's no of ticks per rev motor shaft
-#define COUNTS_PER_REV_2 2709.2 // wheel encoder's no of ticks per rev motor shaft
+#define COUNTS_PER_REV_2  9048 // wheel encoder's no of ticks per rev motor shaft
 
 // Timer Seetings
-#define SENSOR_PERIOD_MS 20 // Sensor read period in ms (>=20 ms)
+#define SENSOR_PERIOD_MS 40 // Sensor read period in ms (>=20 ms)
 #define CONTROL_PERIOD_MS 40 // Control loop period in ms
 
 // PID parameters for RPM control
@@ -41,7 +41,7 @@
 #define KI_1 0.2 // I constant for motor 1
 #define KD_1 0 // D constant for motor 1
 
-#define Kff_2 0.7187 // RPM to PWM mapping for motor 2
+#define Kff_2  2.405 // RPM to PWM mapping for motor 2 0.7187
 #define Kfr_2 4.0236 // PWM for drive friction of motor 2
 #define KP_2 2 // P constant
 #define KI_2 0.2 // I constant

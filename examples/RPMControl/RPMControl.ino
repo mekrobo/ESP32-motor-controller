@@ -66,7 +66,7 @@ void sensor_read(void *parameter) {
     pulse_count_m1 = motor1_encoder.getCount();
     pulse_count_m2 = motor2_encoder.getCount();
     mes_rpm.motor1 = (pulse_count_m1 - last_pulse_count_m1) * TICKS2RPM_1; // RPM calculation channel 1
-    mes_rpm.motor2 = (pulse_count_m2 - last_pulse_count_m2) * TICKS2RPM_1; // RPM calculation channel 2
+    mes_rpm.motor2 = (pulse_count_m2 - last_pulse_count_m2) * TICKS2RPM_2; // RPM calculation channel 2
     last_pulse_count_m1 = pulse_count_m1;
     last_pulse_count_m2 = pulse_count_m2;
     mes_current.motor1 = analogRead(MOTOR1_C) * VALUE2AMP; // Assuming a 12-bit ADC and 3.3V reference
@@ -114,8 +114,8 @@ void loop() {
 
   for(int i = 0; i <= 80; i++){   
     // changing the RPM with PWM
-    des_rpm.motor1 = (float)(i*2); // Desired RPM for motor 1
-    des_rpm.motor2 = (float)(i*2); // Desired RPM for motor 2
+    des_rpm.motor1 = (float)(i); // Desired RPM for motor 1
+    des_rpm.motor2 = (float)(i); // Desired RPM for motor 2
 
     //Sensor data print
     data_sensor[0] = '\0';
@@ -133,8 +133,8 @@ void loop() {
   for(int i = 80; i >= -80; i--){
     // changing the RPM with PWM
 
-    des_rpm.motor1 = (float)(i*2); // Desired RPM for motor 1
-    des_rpm.motor2 = (float)(i*2); // Desired RPM for motor 2
+    des_rpm.motor1 = (float)(i); // Desired RPM for motor 1
+    des_rpm.motor2 = (float)(i); // Desired RPM for motor 2
     
     // Sensor data print
     data_sensor[0] = '\0';
@@ -151,8 +151,8 @@ void loop() {
 
   for(int i = -80; i <= 0; i++){
     // changing the RPM with PWM
-    des_rpm.motor1 = (float)(i*2); // Desired RPM for motor 1
-    des_rpm.motor2 = (float)(i*2); // Desired RPM for motor 2
+    des_rpm.motor1 = (float)(i); // Desired RPM for motor 1
+    des_rpm.motor2 = (float)(i); // Desired RPM for motor 2
 
     // Sensor data print
     data_sensor[0] = '\0';

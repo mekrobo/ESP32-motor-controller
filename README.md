@@ -41,7 +41,7 @@ After successful installation of the libraries and dependencies. The examples ar
 Four examples are available:
 
 - **PWM Sweep for Single Channel:** [PWMChannel1.ino](examples/PWMChannel1/PWMChannel1.ino)
-- **PWM Sweep for Dual Channel:** [PWM.ino](examples\PWM\PWM.ino)
+- **PWM Sweep for Dual Channel:** [PWM.ino](examples/PWM/PWM.ino)
 - **RPM Sweep for Single Channel:** [RPMControlChannel1.ino](examples/RPMControlChannel1/RPMControlChannel1.ino)
 - **RPM Sweep for Dual Channel:** [RPMControl.ino](examples/RPMControl/RPMControl.ino) 
 
